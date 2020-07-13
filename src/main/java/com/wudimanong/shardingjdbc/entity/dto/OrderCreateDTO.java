@@ -12,7 +12,7 @@ public class OrderCreateDTO {
     /**
      * 订单ID
      */
-    private String orderId;
+    private Long orderId;
 
     /**
      * 交易类型

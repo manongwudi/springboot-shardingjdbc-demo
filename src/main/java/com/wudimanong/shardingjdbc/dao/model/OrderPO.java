@@ -11,14 +11,14 @@ import lombok.Data;
 public class OrderPO {
 
     private Integer id;
-    private String orderId;
+    private Long orderId;
     private String tradeType;
     private Integer amount;
     private String currency;
     private String status;
     private String channel;
     private String tradeNo;
-    private String userId;
+    private Long userId;
     private Timestamp createTime;
     private Timestamp updateTime;
     private String remark;

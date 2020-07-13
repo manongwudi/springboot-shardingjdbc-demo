@@ -17,7 +17,7 @@ public class OrderCreateBO {
     /**
      * 订单ID
      */
-    private String orderId;
+    private Long orderId;
 
     /**
      * 用户ID

@@ -22,7 +22,7 @@ public class OrderServiceImpl implements OrderService {
     public OrderCreateBO createOrder(OrderCreateDTO orderCreateDTO) {
         OrderPO orderPO = new OrderPO();
         orderPO.setOrderId(orderCreateDTO.getOrderId());
-        orderPO.setUserId(String.valueOf(orderCreateDTO.getUserId()));
+        orderPO.setUserId(orderCreateDTO.getUserId());
         orderPO.setAmount(Integer.valueOf(orderCreateDTO.getAmount()));
         orderPO.setCurrency(orderCreateDTO.getCurrency());
         orderPO.setStatus("0");
