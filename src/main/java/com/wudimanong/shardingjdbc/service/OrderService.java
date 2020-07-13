@@ -1,5 +1,8 @@
 package com.wudimanong.shardingjdbc.service;
 
+import com.wudimanong.shardingjdbc.entity.bo.OrderCreateBO;
+import com.wudimanong.shardingjdbc.entity.dto.OrderCreateDTO;
+
 /**
  * @author jiangqiao
  */
@@ -8,8 +11,8 @@ public interface OrderService {
     /**
      * 创建订单方法
      *
-     * @param name
+     * @param orderCreateDTO
      * @return
      */
-    String createOrder(String name);
+    OrderCreateBO createOrder(OrderCreateDTO orderCreateDTO);
 }

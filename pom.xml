@@ -13,6 +13,12 @@
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <!--属性信息-->
+    <properties>
+        <!--Sharding-JDBC当前版本-->
+        <sharding-sphere.version>4.1.1</sharding-sphere.version>
+    </properties>
+
     <dependencies>
         <!--微服务健康性检查-->
         <dependency>
@@ -61,6 +67,21 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- 引入Sharding-JDBC Spring Boot依赖组件 -->
+        <!-- Sharding-JDBC For Spring Boot Start -->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>${sharding-sphere.version}</version>
+        </dependency>
+        <!-- for spring namespace -->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-namespace</artifactId>
+            <version>${sharding-sphere.version}</version>
+        </dependency>
+        <!-- Sharding-JDBC For Spring Boot End -->
     </dependencies>
 
     <!--定义关于区分集成测试及单元测试代码的profiles-->
