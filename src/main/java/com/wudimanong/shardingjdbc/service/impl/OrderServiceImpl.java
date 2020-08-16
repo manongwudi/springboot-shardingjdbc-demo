@@ -6,6 +6,7 @@ import com.wudimanong.shardingjdbc.entity.bo.OrderCreateBO;
 import com.wudimanong.shardingjdbc.entity.dto.OrderCreateDTO;
 import com.wudimanong.shardingjdbc.service.OrderService;
 import java.sql.Timestamp;
+import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderCreateBO createOrder(OrderCreateDTO orderCreateDTO) {
         OrderPO orderPO = new OrderPO();
+        orderPO.setId(UUID.randomUUID().toString().replace("-", ""));
         orderPO.setOrderId(orderCreateDTO.getOrderId());
         orderPO.setUserId(orderCreateDTO.getUserId());
         orderPO.setAmount(Integer.valueOf(orderCreateDTO.getAmount()));

@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 public class OrderPO {
 
-    private Integer id;
+    private String id;
     private Long orderId;
     private String tradeType;
     private Integer amount;

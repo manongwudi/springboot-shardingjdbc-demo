@@ -4,7 +4,7 @@
     <!--批量Insert方法-->
     <insert id="insert" parameterType="com.wudimanong.shardingjdbc.dao.model.OrderPO">
         insert into
-        t_order(order_id,trade_type,amount,currency,status,channel,trade_no,user_id,update_time,create_time,remark)
-        values (#{orderId}, #{tradeType},#{amount,jdbcType=INTEGER},#{currency},#{status},#{channel},#{tradeNo},#{userId},#{updateTime},#{createTime},#{remark})
+        t_order(id,order_id,trade_type,amount,currency,status,channel,trade_no,user_id,update_time,create_time,remark)
+        values (#{id},#{orderId}, #{tradeType},#{amount,jdbcType=INTEGER},#{currency},#{status},#{channel},#{tradeNo},#{userId},#{updateTime},#{createTime},#{remark})
     </insert>
 </mapper>
